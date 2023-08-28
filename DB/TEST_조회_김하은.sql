@@ -99,3 +99,15 @@ VALUES (
 
 ALTER TABLE concert_info
 DROP CONSTRAINT fk_child_parent;
+
+UPDATE concert_info
+SET location = (SELECT  h.name
+FROM hall_info h 
+WHERE h.hall_id = 2)
+WHERE concert_id = 1;
+
+SELECT  h.name
+FROM hall_info h 
+WHERE h.hall_id = 1
+;
+

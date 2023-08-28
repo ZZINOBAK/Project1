@@ -49,7 +49,7 @@ CREATE TABLE RESERVATION (
     concert_id	number(2) REFERENCES CONCERT_INFO (CONCERT_ID),
     hall_id number(2) REFERENCES HALL (HALL_ID),
 	count	number(10)	NOT NULL,
-	seat	varchar2(20)	NOT NULL,
+	seat	number(3)	NOT NULL,
 	totalPrice	number(30)	NOT NULL,
     paymentMethod	varchar2(255)	NOT NULL,
 	createDate varchar2(200)	NOT NULL,
